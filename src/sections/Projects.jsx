@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import dashboardImg from '../assets/habitmetricdashboard.png';
 
 export default function Projects() {
     const features = [
@@ -24,7 +25,7 @@ export default function Projects() {
                     <div id="project-visual" className="w-full lg:w-3/5 group rounded-[3rem] overflow-hidden border border-border bg-sage/5 p-4">
                         <div className="rounded-[2rem] overflow-hidden shadow-xl border border-border/50">
                             <img
-                                src="/habitmetricdashboard.png"
+                                src={dashboardImg}
                                 className="w-[101.8%] max-w-[101.8%] h-auto group-hover:scale-[1.02] transition-transform duration-700 ease-out origin-left"
                                 alt="HabitMetric Interface Dashboard"
                             />
@@ -35,7 +36,7 @@ export default function Projects() {
                         <div>
                             <h3 className="text-5xl font-heading font-bold text-primary mb-6 tracking-tighter leading-none">HabitMetric</h3>
                             <p className="text-xl text-secondary leading-relaxed font-light">
-                                A habit and planning system built to turn <span className="text-primary font-medium underline decoration-sage/30 underline-offset-4">rough intentions</span> into <span className="text-primary font-medium">structured daily execution.</span>
+                                A habit and planning system built to turn <span className="inline-block hover:-translate-y-1 hover:scale-105 transition-transform duration-300 cursor-default text-primary font-medium underline decoration-sage/30 underline-offset-4 mx-1">rough intentions</span> into <span className="inline-block hover:-translate-y-1 hover:scale-105 transition-transform duration-300 cursor-default text-primary font-medium mx-1">structured daily execution.</span>
                             </p>
                         </div>
 

@@ -41,7 +41,8 @@ export default function WhatIDo() {
                         key={index}
                         onClick={() => scrollTo(item.id)}
                         whileHover={{ y: -10 }}
-                        className="p-10 rounded-[2.5rem] border border-sage/40 bg-white hover:bg-sage hover:border-sage-dark transition-all duration-500 group cursor-pointer"
+                        whileTap={{ scale: 0.95 }}
+                        className="p-10 rounded-[2.5rem] border border-sage/40 bg-white hover:bg-sage active:bg-sage hover:border-sage-dark transition-all duration-500 group cursor-pointer"
                     >
                         <div className="text-sage-dark group-hover:text-white mb-6 transition-colors duration-500">
                             {item.icon}
