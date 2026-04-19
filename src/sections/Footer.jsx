@@ -25,7 +25,7 @@ export default function Footer() {
                             ))}
                         </h2>
                         <p className="text-[#BFD8CC] text-lg md:text-xl font-light leading-relaxed">
-                            Open to <span className="inline-block hover:-translate-y-1 hover:scale-105 transition-transform duration-300 font-medium text-white cursor-default mx-1 -mt-1">frontend</span>, <span className="inline-block hover:-translate-y-1 hover:scale-105 transition-transform duration-300 font-medium text-white cursor-default mx-1 -mt-1">UI-focused</span>, and <span className="inline-block hover:-translate-y-1 hover:scale-105 transition-transform duration-300 font-medium text-white cursor-default mx-1 -mt-1">product-minded opportunities</span>.
+                            Open to <span className="inline-block hover:-translate-y-1 hover:scale-105 transition-transform duration-300 font-medium text-white cursor-default mx-1 -mt-1">frontend</span>, <span className="inline-block hover:-translate-y-1 hover:scale-105 transition-transform duration-300 font-medium text-white cursor-default mx-1 -mt-1">UI/UX</span>, and <span className="inline-block hover:-translate-y-1 hover:scale-105 transition-transform duration-300 font-medium text-white cursor-default mx-1 -mt-1">product-thinking opportunities</span>.
                         </p>
                     </div>
 
