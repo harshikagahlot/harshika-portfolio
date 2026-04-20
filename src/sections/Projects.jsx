@@ -56,7 +56,7 @@ export default function Projects() {
                             <a href="https://github.com/harshikagahlot/HabitMetric" target="_blank" rel="noopener noreferrer" className="text-primary font-bold hover:text-sage-dark transition-colors text-xs tracking-widest border-b-2 border-primary/10 hover:border-sage pb-1">
                                 VIEW ON GITHUB
                             </a>
-                            <a href="https://github.com/harshikagahlot/HabitMetric" target="_blank" rel="noopener noreferrer" className="text-primary font-bold hover:text-sage-dark transition-colors text-xs tracking-widest border-b-2 border-primary/10 hover:border-sage pb-1">
+                            <a href="https://harshikagahlot.github.io/HabitMetric/" target="_blank" rel="noopener noreferrer" className="text-primary font-bold hover:text-sage-dark transition-colors text-xs tracking-widest border-b-2 border-primary/10 hover:border-sage pb-1">
                                 LIVE DEMO ↗
                             </a>
                         </div>
