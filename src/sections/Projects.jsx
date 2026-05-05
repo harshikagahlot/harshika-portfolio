@@ -19,8 +19,8 @@ const projects = [
         description: 'A product-minded platform connecting linguistic growth with environmental impact. It gamifies the process of learning sustainability-focused vocabulary while tracking personal green milestones.',
         features: ["Eco-Vocabulary Engine", "Progress Visualization", "Impact Milestones", "Curated Learning Paths"],
         image: suswordImg,
-        github: '#',
-        demo: '#'
+        github: 'https://github.com/harshikagahlot/SusWord',
+        demo: 'https://sus-word.vercel.app'
     }
 ];
 
@@ -30,16 +30,16 @@ export default function Projects() {
     return (
         <section className="py-20 px-6 bg-background border-t border-border/50">
             <div className="max-w-7xl mx-auto">
-                
+
                 {/* INTERACTIVE HEADING */}
-                <button 
+                <button
                     onClick={() => setIsExpanded(!isExpanded)}
                     className="w-full text-left group flex items-center justify-between py-10"
                 >
                     <h2 className="text-5xl md:text-8xl font-heading font-bold text-primary tracking-tighter group-hover:text-sage-dark transition-colors duration-500">
                         Featured Projects
                     </h2>
-                    <motion.span 
+                    <motion.span
                         animate={{ rotate: isExpanded ? 45 : 0 }}
                         className="text-4xl md:text-6xl text-sage"
                     >
@@ -50,19 +50,19 @@ export default function Projects() {
                 {/* EXPANDABLE SECTION */}
                 <motion.div
                     initial={false}
-                    animate={{ 
+                    animate={{
                         height: isExpanded ? 'auto' : 0,
                         opacity: isExpanded ? 1 : 0
                     }}
-                    transition={{ 
-                        duration: 0.7, 
+                    transition={{
+                        duration: 0.7,
                         ease: [0.16, 1, 0.3, 1] // Custom quint ease for smooth expansion
                     }}
                     className="overflow-hidden"
                 >
                     <div className="pt-20 space-y-32">
                         {projects.map((project) => (
-                            <motion.div 
+                            <motion.div
                                 key={project.id}
                                 initial={{ y: 40, opacity: 0 }}
                                 animate={isExpanded ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
@@ -104,18 +104,18 @@ export default function Projects() {
                                     </div>
 
                                     <div className="pt-6 flex gap-8 border-t border-border/50">
-                                        <a 
-                                            href={project.github} 
-                                            target="_blank" 
-                                            rel="noopener noreferrer" 
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="text-primary font-bold hover:text-sage-dark transition-colors text-[10px] tracking-widest uppercase border-b border-primary/20 hover:border-sage pb-1"
                                         >
                                             Source Code
                                         </a>
-                                        <a 
-                                            href={project.demo} 
-                                            target="_blank" 
-                                            rel="noopener noreferrer" 
+                                        <a
+                                            href={project.demo}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="text-primary font-bold hover:text-sage-dark transition-colors text-[10px] tracking-widest uppercase border-b border-primary/20 hover:border-sage pb-1"
                                         >
                                             Live Demo ↗
@@ -125,7 +125,7 @@ export default function Projects() {
                             </motion.div>
                         ))}
                     </div>
-                    
+
                     {/* BOTTOM PADDING */}
                     <div className="pb-32" />
                 </motion.div>
