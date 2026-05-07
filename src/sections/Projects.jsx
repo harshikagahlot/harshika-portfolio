@@ -16,8 +16,8 @@ const projects = [
     {
         id: 'susword',
         title: 'SusWord',
-        description: 'A product-minded platform connecting linguistic growth with environmental impact. It gamifies the process of learning sustainability-focused vocabulary while tracking personal green milestones.',
-        features: ["Eco-Vocabulary Engine", "Progress Visualization", "Impact Milestones", "Curated Learning Paths"],
+        description: 'A real-time multiplayer social deduction game where players give clues, detect suspicious behavior, and identify the hidden imposter before the final vote. Designed to create psychological tension through interaction, deduction, and live gameplay.',
+        features: ["Real-Time Multiplayer Gameplay", "Social Deduction Mechanics", "Live Clue & Voting System", "Interactive Psychological UX"],
         image: suswordImg,
         github: 'https://github.com/harshikagahlot/SusWord',
         demo: 'https://sus-word.vercel.app'
