@@ -1,37 +1,143 @@
+/* ============================================================
+   GLOBAL STYLES — Aditya Portfolio
+   Tailwind v4 uses CSS-first config — no tailwind.config.ts needed.
+   All design tokens are defined here via @theme.
+   ============================================================ */
+
 @import "tailwindcss";
 
+/* ── Design Tokens ─────────────────────────────────────────── */
 @theme {
-  --color-background: #F8F7F3;
-  --color-primary: #1C1C1C;
-  --color-secondary: #4A524C;
-  /* Slightly darker gray for better readability */
+  /* Colors */
+  --color-bg-primary: #0a0a0f;
+  --color-bg-secondary: #111118;
+  --color-bg-card: #16161f;
 
-  /* NEW DARKER SAGE PALETTE */
-  --color-sage-light: #C5D1C9;
-  --color-sage: #9EB0A5;
-  /* This is your new "Main" green */
-  --color-sage-dark: #76897E;
-  /* For icons and borders */
+  --color-accent-purple: #7c6ff7;
+  --color-accent-teal: #2dd4a8;
+  --color-accent-coral: #f47c5a;
 
-  --color-accent: #C8A96A;
-  --color-border: rgba(28, 28, 28, 0.12);
-  /* Darkened border for definition */
+  --color-text-primary: #f0eff8;
+  --color-text-secondary: #8b8a9a;
+  --color-text-hint: #4a4958;
 
-  --font-sans: "Inter", sans-serif;
-  --font-heading: "Clash Display", "Satoshi", sans-serif;
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-border-default: rgba(255, 255, 255, 0.1);
+
+  /* Typography */
+  --font-display: "Cabinet Grotesk", system-ui, sans-serif;
+  --font-body: "Satoshi", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 }
 
-@layer base {
-  body {
-    @apply bg-background text-secondary font-sans antialiased;
-  }
+/* ── Global Reset & Base ───────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-heading tracking-tight text-primary;
+html, body {
+  background-color: #0a0a0f;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles smooth scroll */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── Hero Background Gradient Animation ───────────────────── */
+@keyframes gradientDrift {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+    opacity: 0.08;
+  }
+  33% {
+    transform: translate(8%, -12%) scale(1.1);
+    opacity: 0.12;
+  }
+  66% {
+    transform: translate(-6%, 8%) scale(0.95);
+    opacity: 0.07;
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+    opacity: 0.08;
   }
 }
+
+.hero-gradient-orb {
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 60%;
+  height: 70%;
+  background: radial-gradient(
+    ellipse at center,
+    var(--color-accent-purple) 0%,
+    transparent 70%
+  );
+  animation: gradientDrift 18s ease-in-out infinite;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* ── Gradient Text Utility ─────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-purple) 0%,
+    var(--color-accent-teal) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Scrollbar Styling ─────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-default);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-hint);
+}
+
+/* ── Selection ─────────────────────────────────────────────── */
+::selection {
+  background: rgba(124, 111, 247, 0.3);
+  color: var(--color-text-primary);
+}
+
+/* ── Custom Cursor overrides ────────────────────────────────── */
+* {
+  cursor: none !important;
+}
+
+@media (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+}
+
